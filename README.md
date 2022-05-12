@@ -17,12 +17,12 @@ Family members research nursing home facilities on the [**Nursing Home Care Comp
 If a subset of collected nursing home data has the most importance as determined by the ML model, nursing homes can then be **proactive** in terms of not possessing those deficiencies for (unannounced) future inspections in order to obtain a higher overall rating next time. 
 
 
-### Machine learning dataset
+### Machine Learning Dataset
 11,585 nursing home instances, 56 numeric features, and the target variable (i.e., overall rating).
 
 ![Class label distribution](https://user-images.githubusercontent.com/96803412/168177798-5d841bd7-90c3-48e5-b584-4c84716a85ef.png)
 
-### Classification algorithms investigated
+### Classification Algorithms Investigated
 - k-Nearest Neighbors
 - Multi-class Logistic Regression
 - Random Forest
