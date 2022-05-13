@@ -20,7 +20,13 @@ If a subset of collected nursing home data has the most importance as determined
 ### Machine Learning Dataset
 11,585 nursing home instances, 56 numeric features, and the target variable (i.e., overall rating).
 
-![Class label distribution](https://user-images.githubusercontent.com/96803412/168177798-5d841bd7-90c3-48e5-b584-4c84716a85ef.png)
+![class-distr](https://user-images.githubusercontent.com/96803412/168186281-db678a17-6677-4060-973a-c17b61110bbc.png)
+
+### Data Visualizations
+Below is one of the correlation heatmaps that we inspected as part of our exploratory data analysis. The values are Kendall’s tau correlation coefficients.
+
+![corr-heatmap](https://user-images.githubusercontent.com/96803412/168186230-6ca81cc7-e4c6-4620-977e-1c53de8d0c95.png)
+
 
 ### Classification Algorithms Investigated
 - k-Nearest Neighbors
@@ -28,11 +34,26 @@ If a subset of collected nursing home data has the most importance as determined
 - Random Forest
 - AdaBoost
 
+### Code Chunk: Pipeline, Grid Search for Multi-class Logistic Regression
+```python
+cv = StratifiedKFold(n_splits=10, random_state=1, shuffle=True)
+
+pipe_lr = Pipeline([('scaler', StandardScaler()),
+                    ('imputer', KNNImputer()),
+                    ('selector', SelectKBest()),
+                    ('classifier', LogisticRegression(multi_class='multinomial', solver='lbfgs'))])
+search_lr = GridSearchCV(pipe_lr, param_grid, scoring='accuracy', n_jobs=-1, cv=cv)
+result_lr = search_lr.fit(X_train, y_train)
+
+print('Best Estimator: %s' % result_lr.best_estimator_)
+print('Best Score: %s' % result_lr.best_score_)
+```
+
 ##
 ### Project Highlights
 - Multi-class classification problem
 - Restructuring and transforming datasets
-- Data merging to create the final ML dataset
+- Data merging (left joins, inner joins) to create the final ML dataset
 - Exploratory data analysis (EDA)
 - Scikit-learn pipelines
 - Feature scaling with **StandardScaler**
