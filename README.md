@@ -16,6 +16,8 @@ Family members research nursing home facilities on the [**Nursing Home Care Comp
 
 If a subset of collected nursing home data has the most importance as determined by the ML model, nursing homes can then be **proactive** in terms of not possessing those deficiencies for (unannounced) future inspections in order to obtain a higher overall rating next time. 
 
+### Data Source
+[Centers for Medicare & Medicaid Services](https://data.cms.gov/provider-data/search?theme=Nursing%20homes%20including%20rehab%20services)
 
 ### Machine Learning Dataset
 11,585 nursing home instances, 56 numeric features, and the target variable (i.e., overall rating).
