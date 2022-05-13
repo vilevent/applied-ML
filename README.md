@@ -17,7 +17,7 @@ Family members research nursing home facilities on the [**Nursing Home Care Comp
 If a subset of collected nursing home data has the most importance as determined by the ML model, nursing homes can then be **proactive** in terms of not possessing those deficiencies for (unannounced) future inspections in order to obtain a higher overall rating next time. 
 
 ### Data Source
-[Centers for Medicare & Medicaid Services](https://data.cms.gov/provider-data/search?theme=Nursing%20homes%20including%20rehab%20services)
+[The Centers for Medicare & Medicaid Services](https://data.cms.gov/provider-data/search?theme=Nursing%20homes%20including%20rehab%20services)
 
 ### Machine Learning Dataset
 11,585 nursing home instances, 56 numeric features, and the target variable (i.e., overall rating).
@@ -25,7 +25,7 @@ If a subset of collected nursing home data has the most importance as determined
 ![class-distr](https://user-images.githubusercontent.com/96803412/168186281-db678a17-6677-4060-973a-c17b61110bbc.png)
 
 ### Data Visualizations
-Below is one of the correlation heatmaps that we inspected as part of our exploratory data analysis. The values are Kendall’s tau correlation coefficients.
+Below is one of the **correlation heatmaps** that we inspected as part of our exploratory data analysis. The values are Kendall’s tau correlation coefficients.
 
 ![corr-heatmap](https://user-images.githubusercontent.com/96803412/168186230-6ca81cc7-e4c6-4620-977e-1c53de8d0c95.png)
 
@@ -55,11 +55,11 @@ print('Best Score: %s' % result_lr.best_score_)
 ### Project Highlights
 - Multi-class classification problem
 - Restructuring and transforming datasets
-- Data merging (left joins, inner joins) to create the final ML dataset
+- Data merging (*left joins, inner joins*) to create the final ML dataset
 - Exploratory data analysis (EDA)
 - Scikit-learn pipelines
 - Feature scaling with **StandardScaler**
 - Missing data imputation with **KNNImputer**
 - Feature selection with **SelectKBest**
 - 10-fold stratified cross-validation for model evaluation
-- Feature importances for the ML models
+- Feature importances of the ML models
