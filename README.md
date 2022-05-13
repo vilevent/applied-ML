@@ -19,7 +19,14 @@ If a subset of collected nursing home data has the most importance as determined
 ### Data Source
 [The Centers for Medicare & Medicaid Services](https://data.cms.gov/provider-data/search?theme=Nursing%20homes%20including%20rehab%20services)
 
-### Machine Learning Dataset
+***Five original datasets from CMS:***
+1. Health Deficiencies
+2. MDS Quality Measures
+3. Medicare Claims Quality Measures
+4. Provider Information
+5. Survey Summary
+
+### Machine Learning Dataset (*created*)
 11,585 nursing home instances, 56 numeric features, and the target variable (i.e., overall rating).
 
 ![class-distr](https://user-images.githubusercontent.com/96803412/168186281-db678a17-6677-4060-973a-c17b61110bbc.png)
